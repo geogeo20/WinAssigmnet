@@ -1,0 +1,234 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3fc5a8d6a6b9364bb6ce0f32a427a19, type: 3}
+  m_Name: Conifg
+  m_EditorClassIdentifier: 
+  CardsConfig:
+  - cardVisual: {fileID: 21300000, guid: 77280356aa4ba27488d0f6f83e995a5e, type: 3}
+    cardValue: 2
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: bb5fcd9fdfbc5c94a81ed4298730e924, type: 3}
+    cardValue: 3
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: ece812ef24e5bd949bdfd83f495156cd, type: 3}
+    cardValue: 4
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 0a5736fb96848f84bbfe7779f156a857, type: 3}
+    cardValue: 5
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: fcc88afeb9c922e4abd8b9c89f3b1db5, type: 3}
+    cardValue: 6
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 30b6385b15ab61b4fb0e4c378b8bacc5, type: 3}
+    cardValue: 7
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 4a072dc02db1b844e9c347d7cb22e7ff, type: 3}
+    cardValue: 8
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: b2925104178b88b469e3b09ad800c57c, type: 3}
+    cardValue: 9
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 1a8d0ac6803b9994b8621f1754b9e234, type: 3}
+    cardValue: 10
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: bba4a4b4b02783a4ca0b88791366d2ad, type: 3}
+    cardValue: 11
+    isWildCard: 0
+    isAce: 1
+  - cardVisual: {fileID: 21300000, guid: 0dd1fd52d76b90243a695bf20deb6f1a, type: 3}
+    cardValue: 10
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 5e7e9b2771a8f774e86fc5fea70d7dcb, type: 3}
+    cardValue: 10
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 4d4577b46ea958047b9f2fa852ff4fb9, type: 3}
+    cardValue: 10
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: cc87f26ef0d1bb04e8aa2077cf9fbf38, type: 3}
+    cardValue: 2
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 86f2d55aa8aac534da1473077bb406f1, type: 3}
+    cardValue: 3
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 6e0af2a0fcf772341bcb6e7ec964478f, type: 3}
+    cardValue: 4
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: bfcc32f76c7d80147abe63642b5a8fc4, type: 3}
+    cardValue: 5
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 0d80bd56073326d4f8b4a32f0fc6f8c8, type: 3}
+    cardValue: 6
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 0b109c72b917ee94fa78b08a3add2cee, type: 3}
+    cardValue: 7
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 627b462d367ee2143a63426518aff1b5, type: 3}
+    cardValue: 8
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: c6eea503e432c8b41815cfc1a66ba564, type: 3}
+    cardValue: 9
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 0dfcb3e7743c10547b09fea5403b7278, type: 3}
+    cardValue: 10
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 97030845789879f449bfb40ae55fc816, type: 3}
+    cardValue: 11
+    isWildCard: 0
+    isAce: 1
+  - cardVisual: {fileID: 21300000, guid: 787461582c854fa419ce82ecec35f9f0, type: 3}
+    cardValue: 10
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 2e55647c451136c42b0743b6e5c52d76, type: 3}
+    cardValue: 10
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: cc68bedbf6f35cb478ae517b3fac1194, type: 3}
+    cardValue: 10
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: a4c25c71729bb5c4ebc872283f4acbb9, type: 3}
+    cardValue: 2
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 2cfa7077fc61e7f41a09878e9f10fab0, type: 3}
+    cardValue: 3
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 80e5bc4302e2be54a8700132197ac757, type: 3}
+    cardValue: 4
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 40954309a6406a54582b78e06ddeae71, type: 3}
+    cardValue: 5
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 386f45f90a23b404fa58a7ac99242735, type: 3}
+    cardValue: 6
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: a41ddc0461b939f41898655507164792, type: 3}
+    cardValue: 7
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: a135da638d1f4094597617dc7804c85c, type: 3}
+    cardValue: 8
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 56015a48ef7818f44bd5907e61af826d, type: 3}
+    cardValue: 9
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 5910ac19abcea9c4cb0f03ae5d4c782a, type: 3}
+    cardValue: 10
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: b6bf46abefe8bbc48bdbf89d801f0b57, type: 3}
+    cardValue: 11
+    isWildCard: 0
+    isAce: 1
+  - cardVisual: {fileID: 21300000, guid: da348f96c171fe5459c9064d411a8cdb, type: 3}
+    cardValue: 10
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 69484eb404475b540ac5b5270ee37b05, type: 3}
+    cardValue: 10
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 63e9ab668629ac841ba73a2f113497c7, type: 3}
+    cardValue: 10
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 7c4c4780e62b20146bad5c14eebb02e7, type: 3}
+    cardValue: 2
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: fb1a08f1a347576479bb694ee9a8c95d, type: 3}
+    cardValue: 3
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: f82a1d9772536fb46858bdacb80ba807, type: 3}
+    cardValue: 4
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: f1bd07677f97e6645a2c4ebf002cd94a, type: 3}
+    cardValue: 5
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 192051f4fb504264ab5d5559a4d36031, type: 3}
+    cardValue: 6
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 2562af43bf7681f4da343f9b97cbb140, type: 3}
+    cardValue: 7
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: ef801fb3967df674398c63452f095aac, type: 3}
+    cardValue: 8
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 872ed6a6d9fe9c74b9a04928841aafe8, type: 3}
+    cardValue: 9
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 4215d6da0db8f34478eee229327e6d5f, type: 3}
+    cardValue: 10
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: d858b9b1023e6e04aa611ec08b8bdbe5, type: 3}
+    cardValue: 11
+    isWildCard: 0
+    isAce: 1
+  - cardVisual: {fileID: 21300000, guid: 4604f2a5a23eea343a7a06b3bf1f2b36, type: 3}
+    cardValue: 10
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: e05a670dafc9b3b478845ad80bbf163d, type: 3}
+    cardValue: 10
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 1429808366fa4b54a90c8ac2dfb42869, type: 3}
+    cardValue: 10
+    isWildCard: 0
+    isAce: 0
+  - cardVisual: {fileID: 21300000, guid: 06667aa0f13bb2d43826e5ee47ff9547, type: 3}
+    cardValue: 0
+    isWildCard: 1
+    isAce: 0
+  CardBackVisual: {fileID: 21300000, guid: e6603e3568fff1c4c910f4e10a12f38d, type: 3}
+  ColumnBustLimit: 2
+  TotalBustLimit: 3
+  TimeLimit: 240
+  WildCardsCount: 1
+  BlackJackScore: 21
+  MaxCardsInDeck: 8

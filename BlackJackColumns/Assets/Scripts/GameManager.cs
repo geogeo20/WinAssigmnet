@@ -1,17 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using System;
 using TMPro;
-using UnityEngine.SceneManagement;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : SingletonBehaviour<GameManager>
 {
     [Header("Game config")]
-    [SerializeField]
-    private GameConfig gameConfig;
-    public GameConfig GameConfig { get { return gameConfig; } }
+    [SerializeField] private GameConfig _gameConfiguration;
+
+    public GameConfig GameConfig => _gameConfiguration;
 
     [Space]
     [SerializeField]
@@ -19,7 +17,7 @@ public class GameManager : SingletonBehaviour<GameManager>
     [SerializeField]
     private Transform cardsHolder;
     [SerializeField]
-    private Timer timer;
+    private Timer _timer;
     [SerializeField]
     private List<ColumnSlot> columnSlots;
     [SerializeField]
@@ -38,8 +36,8 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     private void Start()
     {
-        availableCards = new(GameConfig.CardsConfig);
-        deckPool = new();
+        availableCards = new(_gameConfiguration.CardsConfig);
+        deckPool = new PoolList<PlayCard>();
         deckPool.Init(playCardReference, cardsHolder);
         playButton.onClick.AddListener(StartGame);
         InitColumns();
@@ -50,19 +48,19 @@ public class GameManager : SingletonBehaviour<GameManager>
     {
         foreach (var column in columnSlots)
         {
-            column.Init(GameConfig.ColumnBustLimit, GameConfig.BlackJackScore, DropCards);
+            column.Init(_gameConfiguration.ColumnBustLimit, _gameConfiguration.BlackJackScore, DropCards);
         }
 
     }
 
     private void InitTimer()
     {
-        timer.InitTimer(GameConfig.TimeLimit, CountdownComplete);
+        _timer.InitTimer(_gameConfiguration.TimeLimit, CountdownComplete);
     }
 
     private void GenerateInitialDeck()
     {
-        for (int i = 0; i < GameConfig.MaxCardsInDeck; i++)
+        for (int i = 0; i < _gameConfiguration.MaxCardsInDeck; i++)
         {
             cardsInDeck++;
             GenerateCard();
@@ -83,7 +81,7 @@ public class GameManager : SingletonBehaviour<GameManager>
 
     private void StartGame()
     {
-        timer.StarTimer();
+        _timer.Start();
         GenerateInitialDeck();
         playButton.gameObject.SetActive(false);
     }
@@ -93,7 +91,7 @@ public class GameManager : SingletonBehaviour<GameManager>
         bustCounter = 0;
         playButton.gameObject.SetActive(true);
         availableCards.Clear();
-        availableCards = new(GameConfig.CardsConfig);
+        availableCards = new(_gameConfiguration.CardsConfig);
         foreach (var item in columnSlots)
         {
             item.ResetColumn();
@@ -136,16 +134,14 @@ public class GameManager : SingletonBehaviour<GameManager>
         }
     }
 
-    public void DropCards(List<PlayCard> cards, bool bust = false)
+    private void DropCards(List<PlayCard> cards, bool bust = false)
     {
         deckPool.AddToPool(cards);
 
         if (bust)
-        {
             bustCounter++;
-        }
 
-        if(bustCounter == GameConfig.TotalBustLimit)
+        if(bustCounter == _gameConfiguration.TotalBustLimit)
         {
             GameOver(GameOverType.Bust);
         }

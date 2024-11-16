@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2d09501161a184e818f677a6571a65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameConfig: {fileID: 11400000, guid: 0b263dd91d20da54f95cde4b3ec64094, type: 2}
+  _gameConfiguration: {fileID: 11400000, guid: 0b263dd91d20da54f95cde4b3ec64094, type: 2}
   playCardReference: {fileID: 1951240978287468987, guid: a923813cd163ec44e9e3ef8e348af7bb, type: 3}
   cardsHolder: {fileID: 0}
-  timer: {fileID: 0}
+  _timer: {fileID: 0}
   columnSlots:
   - {fileID: 0}
   - {fileID: 0}

@@ -1,53 +1,47 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
+using UnityEngine.Serialization;
 
 public class GameOverPopup : MonoBehaviour
 {
-    private const string gameOverWinText = "You won the game";
-    private const string gameOverTimeText = "You run out of time";
-    private const string gameOverBustText = "You busted too many times";
+    [FormerlySerializedAs("gameOverText")] [SerializeField]
+    private TMP_Text _infoText;
+    [FormerlySerializedAs("restartButton")] [SerializeField]
+    private Button _restartButton;
 
-    [SerializeField]
-    private TMP_Text gameOverText;
-    [SerializeField]
-    private Button restartButton;
-
-    private Action onRestartButtonPressed;
+    private Action _onRestartButtonPressed;
 
     public void OpenPopup(GameOverType type, Action onRestartButtonPressed)
     {
-        this.onRestartButtonPressed = onRestartButtonPressed;
-        restartButton.onClick.AddListener(RestartGame);
+        _onRestartButtonPressed = onRestartButtonPressed;
+        _restartButton.onClick.AddListener(RestartGame);
+        
         SetGameOverText(type);
         gameObject.SetActive(true);
     }
 
     private void SetGameOverText(GameOverType type)
     {
-        switch (type)
+        var gameConfig = GameManager.Instance.GameConfig;
+        
+        _infoText.text = type switch
         {
-            case GameOverType.Bust:
-                gameOverText.text = gameOverBustText;
-                break;
-            case GameOverType.Time:
-                gameOverText.text = gameOverTimeText;
-                break;
-            case GameOverType.Win:
-                gameOverText.text = gameOverWinText;
-                break;
-            default:
-                break;
-        }
+            GameOverType.Bust => gameConfig.LOST_BUST_GAME_TEXT,
+            GameOverType.Time => gameConfig.LOST_TIME_GAME_TEXT,
+            GameOverType.Win => gameConfig.WON_GAME_TEXT,
+            _ => _infoText.text
+        };
     }
 
     private void RestartGame()
     {
-        onRestartButtonPressed?.Invoke();
         gameObject.SetActive(false);
-        restartButton.onClick.RemoveAllListeners();
+        
+        _onRestartButtonPressed?.Invoke();
+        _onRestartButtonPressed = null;
+        
+        _restartButton.onClick.RemoveAllListeners();
     }
 }

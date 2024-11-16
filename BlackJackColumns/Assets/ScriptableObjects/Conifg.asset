@@ -232,3 +232,8 @@ MonoBehaviour:
   WildCardsCount: 1
   BlackJackScore: 21
   MaxCardsInDeck: 8
+  WON_GAME_TEXT: You won the game
+  LOST_TIME_GAME_TEXT: You run out of time
+  LOST_BUST_GAME_TEXT: Busted too many  times
+  BLACKJACK: Blackjack
+  BUST: Bust
